@@ -1,0 +1,5 @@
+h:
+
+cd H:\Database\Coding\Python\ANTIVYRE\antivyre
+
+pyinstaller build.spec

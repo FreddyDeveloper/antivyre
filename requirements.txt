@@ -1,0 +1,23 @@
+# ANTIVYRE — Python dependencies
+# Install with: pip install -r requirements.txt
+
+# ── Core AI detection engine ──────────────────────────────────────────────
+magika>=1.0.0
+
+# ── System monitoring ─────────────────────────────────────────────────────
+psutil>=5.9.0
+
+# ── System tray icon (minimize to tray, right-click menu, notifications) ──
+pystray>=0.19.5
+
+# ── Image processing (tray icon rendering + logo display in UI) ───────────
+Pillow>=10.0.0
+
+# ── Optional: better UI widgets (falls back to tkinter if not installed) ──
+customtkinter>=5.2.0
+
+# ── Windows-specific ──────────────────────────────────────────────────────
+pywin32>=306; sys_platform == "win32"
+
+# ── Build tools (only needed to compile the installer, not at runtime) ────
+# pyinstaller>=6.0.0   # uncomment when building the .exe

@@ -1,0 +1,71 @@
+name: Security Scan
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  gitleaks:
+    name: Secret scanning (gitleaks)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Resolve latest gitleaks version
+        id: ver
+        run: |
+          VERSION=$(curl -fsSL https://api.github.com/repos/gitleaks/gitleaks/releases/latest | grep '"tag_name"' | sed -E 's/.*"v([^"]+)".*/\1/')
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+      - name: Cache gitleaks
+        uses: actions/cache@v4
+        id: cache
+        with:
+          path: .tools/gitleaks
+          key: gitleaks-${{ runner.os }}-${{ steps.ver.outputs.version }}
+      - name: Install gitleaks
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: |
+          VERSION=${{ steps.ver.outputs.version }}
+          mkdir -p .tools
+          curl -fsSL -o .tools/gitleaks.tar.gz "https://github.com/gitleaks/gitleaks/releases/download/v${VERSION}/gitleaks_${VERSION}_linux_x64.tar.gz"
+          tar -xzf .tools/gitleaks.tar.gz -C .tools gitleaks
+          chmod +x .tools/gitleaks
+      - run: .tools/gitleaks git . --redact --exit-code 1
+
+  osv-scan:
+    name: Dependency vulnerability scan (OSV)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install pip-audit
+      - run: pip-audit -r requirements.txt --format json -o security_issues/pip-audit.json || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pip-audit-report
+          path: security_issues/
+
+  semgrep:
+    name: Static analysis (Semgrep)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    container:
+      image: semgrep/semgrep
+    steps:
+      - uses: actions/checkout@v4
+      - run: semgrep scan --config auto --json > security_issues/semgrep.json || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: semgrep-report
+          path: security_issues/

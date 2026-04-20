@@ -1,0 +1,11 @@
+build/  
+dist/  
+__pycache__/  
+*.pyc  
+*.pyo  
+db/malicious_hashes.txt  
+db/malicious_sha1.txt  
+db/malicious_sha256.txt  
+installer/Output/  
+*.db  
+.vscode/ 
