@@ -49,6 +49,25 @@ ANTIVYRE started in 2019, had a working beta by 2021, and is now rebuilt from th
 
 ---
 
+## 🖥️ Screenshots
+
+<div align="center">
+
+<img src="DEMO.png" alt="ANTIVYRE Demo" width="800">
+
+<br><br>
+
+<img src="001.png" alt="ANTIVYRE Screenshot 1" width="380">
+<img src="002.png" alt="ANTIVYRE Screenshot 2" width="380">
+
+<br><br>
+
+<img src="003.png" alt="ANTIVYRE Screenshot 3" width="380">
+
+</div>
+
+---
+
 ## Installation
 
 ### Requirements
