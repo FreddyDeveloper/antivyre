@@ -10,7 +10,7 @@ This is the easiest and most impactful contribution.
 
 1. Fork the repository
 2. Copy `locales/en.json` → `locales/<your_lang_code>.json`
-   - Use standard language codes: `fr`, `de`, `pt`, `ja`, `zh`, `ar`, `ru`, etc.
+   - Use standard language codes: `de`, `ja`, `zh`, `ar`, `ru`, etc.
 3. Edit the new file:
    - Translate **every value** (the text after the `:`)
    - **Never** change the keys (the text before the `:`)
