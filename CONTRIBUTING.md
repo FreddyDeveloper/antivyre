@@ -26,7 +26,7 @@ This is the easiest and most impactful contribution.
 
 **No coding required.** JSON editing is all you need.
 
-Current languages: 🇺🇸 English, 🇪🇸 Spanish — yours could be next!
+Current languages: 🇺🇸 English, 🇪🇸 Spanish, 🇫🇷 French, 🇵🇹 Portuguese — yours could be next!
 
 ### 🦠 Add Malware Signatures
 
