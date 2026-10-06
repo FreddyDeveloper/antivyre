@@ -1,6 +1,6 @@
 <div align="center">
 
-| [🇺🇸 English](README.md) | [🇪🇸 Español](readme/README.es.md) |
+| [🇺🇸 English](README.md) | [🇪🇸 Español](readme/README.es.md) | [🇫🇷 Français](readme/README.fr.md) | [🇵🇹 Português](readme/README.pt.md) |
 
 <br/>
 
@@ -117,7 +117,7 @@ File received
 
 Drop a translated `locales/<lang>.json` file — no coding required. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Current languages: 🇺🇸 English · 🇪🇸 Español
+Current languages: 🇺🇸 English · 🇪🇸 Español · 🇫🇷 Français · 🇵🇹 Português
 
 ---
 
