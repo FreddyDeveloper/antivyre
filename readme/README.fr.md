@@ -35,13 +35,16 @@ ANTIVYRE a commencé en 2019, disposait d’une bêta fonctionnelle en 2021, et 
 
 ## Installation
 
-git clone [https://github.com/FreddyDeveloper/antivyre.git](https://github.com/FreddyDeveloper/antivyre.git) cd antivyre pip install -r requirements.txt python main.py
-
+```bash
+git clone https://github.com/FreddyDeveloper/antivyre.git
+cd antivyre
+pip install -r requirements.txt
+python main.py
 ---
 
 ## Ajouter une langue
 
-Placez un fichier `locales/<code>.json` traduit — aucune programmation n’est requise. Voir [CONTRIBUTING.md](https://github.com/FreddyDeveloper/antivyre/blob/main/CONTRIBUTING.md).
+Placez un fichier `locales/<code>.json` traduit — aucune programmation n’est requise. Voir [CONTRIBUTING.md](../CONTRIBUTING.md).
 
 ---
 
