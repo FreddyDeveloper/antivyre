@@ -4,7 +4,7 @@
 
 <br/>
 
-# ⚡ ANTIVYRE
+# ⚡ANTIVYRE
 
 ### Free, AI-Powered Antivirus — Forever
 
