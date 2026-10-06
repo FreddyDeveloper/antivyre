@@ -1,6 +1,6 @@
 <div align="center">
 
-| [🇺🇸 English](../README.md) | [🇪🇸 Español](README.es.md) |
+| [🇺🇸 English](../README.md) | [🇪🇸 Español](README.es.md) | [🇫🇷 Français](README.fr.md) | [🇵🇹 Português](README.pt.md) |
 
 <br/>
 
@@ -40,26 +40,3 @@ git clone https://github.com/FreddyDeveloper/antivyre.git
 cd antivyre
 pip install -r requirements.txt
 python main.py
-```
-
----
-
-## Añadir un Idioma
-
-Coloca un archivo `locales/<código>.json` traducido — no se requiere programar. Ver [CONTRIBUTING.md](../CONTRIBUTING.md).
-
----
-
-## Apoya el Proyecto
-
-ANTIVYRE es y siempre será **100% gratuito**. Si ha protegido tu sistema, considera una donación voluntaria:
-
-**[💛 Donar por PayPal](https://paypal.me/freddydeveloper)**
-
----
-
-## Licencia
-
-[GNU GPL v3](../LICENSE) — Gratis para siempre.
-
-Creado por [FreddyDeveloper](https://www.freddydeveloper.com) · Impulsado por [Google Magika](https://github.com/google/magika)
